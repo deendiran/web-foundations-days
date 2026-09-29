@@ -11,11 +11,40 @@
     <header>
         <h1>QuickNotes</h1>
         <p>Capture ideas before they disappear</p>
+
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
+        <section>
+            <h2>Add a Note</h2>
+            <form id="note-form">
+                <label for="note-title">Title:</label>
+                <input type="text" id="note-title" name="title" required>
+                <label for="note-content">Content:</label>
+                <textarea id="note-content" name="content" placeholder="Enter your note here..." required></textarea>
+                <button type="submit">Add Note</button>
+            </form>
+        </section>
 
+        <section>
+            <h2>Your Notes</h2>
+            <p id="note-count">You have 2 notes.</p>
+            <ul id="notes-list">
+                <li>Revise HTML forms</li>
+                <li>Push changes to GitHub</li>
+            </ul>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 QuickNotes. All rights reserved.</p>
+    </footer>
 
 </body>
 
