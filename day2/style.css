@@ -1,0 +1,263 @@
+/* ==========================================================================
+   1. Reset & Base Styles
+   ========================================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f4f6f8;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   2. Header & Navigation
+   ========================================================================== */
+header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.25rem;
+    margin-bottom: 0.25rem;
+}
+
+header p {
+    color: #ecf0f1;
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #34495e;
+    color: #3498db;
+}
+
+/* ==========================================================================
+   3. Main Container & Cards
+   ========================================================================== */
+main {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex: 1;
+}
+
+section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #eef2f5;
+    padding-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   4. Features Grid Card Layout
+   ========================================================================== */
+ul.features {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+ul.features li {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 1rem;
+    font-weight: 500;
+    color: #475569;
+}
+
+/* Base unordered/ordered lists styling outside features grid */
+main section>ul:not(.features),
+main section>ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+main section>ul:not(.features) li,
+main section>ol li {
+    margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   5. Keyboard Shortcuts Table
+   ========================================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+th,
+td {
+    border: 1px solid #cbd5e1;
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f1f5f9;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+kbd {
+    background-color: #e2e8f0;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    padding: 0.15rem 0.4rem;
+    font-family: monospace;
+    font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   6. Form & Button Inputs
+   ========================================================================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+label {
+    font-weight: 600;
+    color: #334155;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    resize: vertical;
+    min-height: 100px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+button[type="submit"] {
+    align-self: flex-start;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.1s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================================================
+   7. Footer
+   ========================================================================== */
+footer {
+    background-color: #1e293b;
+    color: #94a3b8;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   8. Responsive Media Queries
+   ========================================================================== */
+@media (max-width: 600px) {
+    header {
+        padding: 1.25rem 0.75rem;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    header p {
+        font-size: 0.95rem;
+    }
+
+    section {
+        padding: 1.25rem 1rem;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+}
