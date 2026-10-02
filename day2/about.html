@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickNotes - About</title>
-    <link rel="stylesheet" href="style.css">
+    <title>QuickNotes</title>
 </head>
 
 <body>
@@ -41,7 +40,7 @@
 
         <section>
             <h2>Features</h2>
-            <ul class="features">
+            <ul>
                 <li>Add and save notes with titles and content.</li>
                 <li>View a list of all your saved notes.</li>
                 <li>Simple and user-friendly interface.</li>
@@ -74,23 +73,17 @@
         <section>
             <h2>Send Feedback</h2>
             <form id="feedback-form">
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div>
-                    <label for="feedback">Feedback:</label>
-                    <textarea id="feedback" name="feedback" placeholder="Enter your feedback here..."
-                        required></textarea>
-                </div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" placeholder="Enter your feedback here..." required></textarea>
                 <button type="submit">Submit Feedback</button>
             </form>
         </section>
     </main>
+
 
     <footer>
         <p>&copy; 2026 QuickNotes. All rights reserved.</p>
