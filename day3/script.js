@@ -39,14 +39,12 @@ function longestNote() {
  * Returns an object counting notes per category.
  */
 
-function countByCategory(category) {
-    const counts = {};
-    for (const note of notes) {
-        if (note.category === category) {
-            counts[category] = (counts[category] || 0) + 1;
-        }
-    }
-    return counts[category] || 0;
+function countByCategory() {
+  const counts = {};
+  for (const note of notes) {
+    counts[note.category] = (counts[note.category] || 0) + 1;
+  }
+  return counts;
 }
 
 /**
@@ -72,8 +70,8 @@ function getSummary() {
  */
 
 function isDuplicate(text) {
-    const lowerCaseText = text.toLowerCase().trim();
-    return notes.some(note => note.text.toLowerCase().trim() === lowerCaseText);
+  const cleanInput = text.trim().toLowerCase();
+  return notes.some(note => note.text.trim().toLowerCase() === cleanInput);
 }
 
 /**
@@ -137,9 +135,7 @@ notes = [...originalNotes];
 console.log("\n--- 3. Test countByCategory ---");
 
 // Normal cases
-console.log(countByCategory("personal"));
-console.log(countByCategory("work"));
-console.log(countByCategory("study"));
+console.log(countByCategory(""));
 
 // Edge case 1: No notes in the array
 console.log("--- Edge case 1: No notes in the array ---");
