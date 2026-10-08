@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Character Counter</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Live Character Counter</h1>
+        <nav id="main-nav">
+          <div class="toggle-button">
+            <button type="button" id="theme-toggle"> Dark Mode </button>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section>
+          <label for="note-text">Enter your note</label>
+          <textarea
+            name="note-text"
+            id="note-text"
+            placeholder="Type your notes here..."
+            required
+          ></textarea>
+
+          <div id="counters">
+            <p id="char-count">Characters:</p>
+            <p id="word-count">Words:</p>
+          </div>
+
+          <div class="actions">
+            <button type="reset" id="clear-btn">Clear</button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
